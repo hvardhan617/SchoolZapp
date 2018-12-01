@@ -23,70 +23,93 @@ import {
   Body,
   Right
 } from "native-base";
-//import Performance from "./Performance";
 
 export default class ChildCard extends Component {
   render() {
     return (
-      <Card style={{ flexDirection: "row", flex: 10 }}>
-        <View style={{ backgroundColor: "red", width: 20 }} />
-        <View>
-          <CardItem>
-            <Left>
+      <Content padder>
+        <Card
+          style={{
+            borderRadius: 8,
+            overflow: "hidden",
+            flexDirection: "row",
+            flex: 10
+          }}
+        >
+          <View style={{ backgroundColor: "#28A885", width: 20 }} />
+          <View>
+            <CardItem>
+              <Left>
+                <View
+                  style={{
+                    justifyContent: "flex-start",
+                    alignItems: "center"
+                  }}
+                >
+                  <Thumbnail source={require("../assets/kid1.jpg")} />
+                  <Text>Harsha</Text>
+                </View>
+
+                <Body>
+                  <View style={{ flexDirection: "row" }}>
+                    <View>
+                      <Text>DAV Public School,Angul</Text>
+                      <Text note>Class 1 | Sec A</Text>
+                      <Text note>Roll No 34</Text>
+                    </View>
+                  </View>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem>
               <View
                 style={{
-                  justifyContent: "flex-start",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
                   alignItems: "center"
                 }}
               >
-                <Thumbnail
-                  source={{
-                    uri:
-                      "https://www.podareducation.org/Uploads/Campus/2013-6-8--12-5-38-227_sampleschoolbuilding.jpg"
-                  }}
-                />
-                <Text>Harsha</Text>
+                <Button transparent style={{ flexDirection: "column" }}>
+                  <Text>82%</Text>
+                  <Text
+                    style={{ fontSize: 11, color: "#9A9090", marginTop: 10 }}
+                  >
+                    Attendance
+                  </Text>
+                </Button>
+                <Button transparent style={{ flexDirection: "column" }}>
+                  <Icon
+                    active
+                    name="chatbubbles"
+                    style={{ color: "#EEAA0E" }}
+                  />
+                  <Text style={{ fontSize: 11, color: "#9A9090" }}>
+                    Performance
+                  </Text>
+                </Button>
+                <Button transparent style={{ flexDirection: "column" }}>
+                  <Icon
+                    active
+                    name="chatbubbles"
+                    style={{ color: "#EEAA0E" }}
+                  />
+                  <Text style={{ fontSize: 11, color: "#9A9090" }}>
+                    Messages
+                  </Text>
+                </Button>
+                <Button transparent style={{ flexDirection: "column" }}>
+                  <Icon
+                    active
+                    name="md-notifications"
+                    style={{ color: "#EEAA0E" }}
+                  />
+                  <Text style={{ fontSize: 11, color: "#9A9090" }}>Feed</Text>
+                </Button>
               </View>
-
-              <Body>
-                <View style={{ flexDirection: "row" }}>
-                  <View>
-                    <Text>DAV Public School,Angul</Text>
-                    <Text note>Class 1 | Sec A</Text>
-                    <Text note>Roll No 34</Text>
-                  </View>
-                </View>
-              </Body>
-            </Left>
-          </CardItem>
-          <CardItem>
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-around",
-                alignItems: "center"
-              }}
-            >
-              <Button transparent style={{ flexDirection: "column" }}>
-                <Text>82%</Text>
-                <Text>Attendance</Text>
-              </Button>
-              <Button transparent style={{ flexDirection: "column" }}>
-                <Icon active name="chatbubbles" />
-                <Text>Performance</Text>
-              </Button>
-              <Button transparent style={{ flexDirection: "column" }}>
-                <Icon active name="chatbubbles" />
-                <Text>Messages</Text>
-              </Button>
-              <Button transparent style={{ flexDirection: "column" }}>
-                <Icon active name="chatbubbles" />
-                <Text>Feed</Text>
-              </Button>
-            </View>
-          </CardItem>
-        </View>
-      </Card>
+            </CardItem>
+          </View>
+        </Card>
+      </Content>
     );
   }
 }

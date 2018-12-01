@@ -132,7 +132,13 @@ export default class Login extends Component {
                   marginBottom: 20
                 }}
               >
-                <Text style={{ textAlign: "center", alignSelf: "center" }}>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    alignSelf: "center",
+                    color: "#ffffff"
+                  }}
+                >
                   LOGIN
                 </Text>
               </Button>

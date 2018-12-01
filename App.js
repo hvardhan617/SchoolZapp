@@ -51,6 +51,12 @@ import AdmissionFormView from "./Views/AdmissionFormView";
 import SchoolDetails from "./Views/SchoolDetails";
 import MyChildrenView from "./Views/MyChildrenView";
 import TestScreen from "./Views/TestScreen";
+import ExamPerformance from "./Components/ExamPerformance";
+import Performance from "./Views/Performance";
+import MultiTabView2 from "./Views/MultiTabView2";
+import performanceView from "./Views/performanceView";
+import ChatCardView from "./Views/ChatCardView";
+import feedCardView from "./Views/feedCardView";
 
 const CustomDrawerContentComponent = props => (
   <Container>
@@ -85,11 +91,16 @@ const AppNavigator = createStackNavigator(
   {
     Home: Login,
     MultiTabView: MultiTabView,
+    MultiTabView2: MultiTabView2,
     Filter: FiltersView,
     Admission: AdmissionFormView,
     Details: SchoolDetails,
     Children: MyChildrenView,
-    AppNavigator: Nav
+    AppNavigator: Nav,
+    Performance: Performance,
+    performanceView: performanceView,
+    ChatCardView: ChatCardView,
+    feedCardView: feedCardView
   },
   {
     initialRouteName: "Home",

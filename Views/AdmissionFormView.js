@@ -73,7 +73,7 @@ export default class AdmissionFormView extends Component {
           <MyTextInput text="Mother's Name" />
           <Footer>
             <FooterTab>
-              <Button>
+              <Button style={{ backgroundColor: "green" }}>
                 <Text>SUBMIT</Text>
               </Button>
             </FooterTab>

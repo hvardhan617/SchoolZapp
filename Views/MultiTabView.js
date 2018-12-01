@@ -96,12 +96,16 @@ export default class TabView extends Component {
     if (this.state.tabNo != 1) {
       return (
         <Footer>
-          <FooterTab>
+          <FooterTab style={{ backgroundColor: "#28A885" }}>
             <Button
               vertical
               onPress={() => this.props.navigation.navigate("Filter")}
             >
-              <Text>Filters</Text>
+              <Text
+                style={{ fontWeight: "bold", fontSize: 15, color: "white" }}
+              >
+                Filters
+              </Text>
             </Button>
             <Button
               vertical
@@ -111,7 +115,11 @@ export default class TabView extends Component {
                 });
               }}
             >
-              <Text>Sort</Text>
+              <Text
+                style={{ fontWeight: "bold", fontSize: 15, color: "white" }}
+              >
+                Sort
+              </Text>
             </Button>
             <Dialog
               onDismiss={() => {
@@ -148,13 +156,13 @@ export default class TabView extends Component {
   render() {
     return (
       <Container>
-        <Header>
+        <Header style={{ backgroundColor: "#ffffff" }}>
           <Left>
             <Button
               transparent
               onPress={() => this.props.navigation.openDrawer()}
             >
-              <Icon name="menu" />
+              <Icon name="menu" style={{ color: "#28A885" }} />
             </Button>
           </Left>
           <Body
@@ -167,25 +175,44 @@ export default class TabView extends Component {
             <Icon name="md-locate" />
 
             <View>
-              <Title>Hyderabad</Title>
+              <Title style={{ color: "#28A885" }}>Hyderabad</Title>
 
-              <Subtitle>Set Location</Subtitle>
+              <Subtitle style={{ color: "#28A885" }}>Set Location</Subtitle>
             </View>
           </Body>
           <Right>
             <Button transparent>
-              <Icon name="search" />
+              <Icon name="search" style={{ color: "#28A885" }} />
             </Button>
           </Right>
         </Header>
 
-        <Content>
-          <Tabs initialPage={0} onChangeTab={() => this.toggleFooter()}>
-            <Tab heading="Schools">
+        <Content style={{ backgroundColor: "#ffffff" }}>
+          <Tabs
+            tabBarUnderlineStyle={{ borderBottomWidth: 2 }}
+            initialPage={0}
+            onChangeTab={() => this.toggleFooter()}
+          >
+            <Tab
+              heading="Schools"
+              tabStyle={{ backgroundColor: "#ffffff" }}
+              textStyle={{ color: "#28A885" }}
+              activeTabStyle={{ backgroundColor: "#ffffff" }}
+              activeTextStyle={{ color: "#28A885", fontWeight: "normal" }}
+            >
               <Dashboard navigation={this.props.navigation} />
             </Tab>
-            <Tab heading="My Children">
-              <MyChildrenView navigation={this.props.navigation} />
+            <Tab
+              heading="My Children"
+              tabStyle={{ backgroundColor: "#ffffff" }}
+              textStyle={{ color: "#28A885" }}
+              activeTabStyle={{ backgroundColor: "#ffffff" }}
+              activeTextStyle={{ color: "#28A885", fontWeight: "normal" }}
+            >
+              <MyChildrenView
+                navigation={this.props.navigation}
+                tabStyle={{ backgroundColor: "#ffffff" }}
+              />
             </Tab>
           </Tabs>
         </Content>

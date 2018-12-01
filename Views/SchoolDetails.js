@@ -40,7 +40,7 @@ export default class SchoolDetails extends Component {
     const navObj = navigation.getParam("navigation", null);
     return (
       <Container>
-        <Header>
+        <Header style={{ backgroundColor: "#28A885" }}>
           <Left>
             <Button transparent>
               <Icon name="arrow-back" />
@@ -304,6 +304,7 @@ export default class SchoolDetails extends Component {
         <Footer>
           <FooterTab>
             <Button
+              style={{ backgroundColor: "#28A885" }}
               onPress={() =>
                 navObj.navigate("Admission", {
                   navigation: this.props.navigation
@@ -339,6 +340,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   footerText: {
-    fontSize: 17
+    fontSize: 17,
+    color: "#fff"
   }
 });

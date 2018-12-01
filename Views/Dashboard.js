@@ -39,51 +39,89 @@ export default class Dashboard extends Component {
             })
           }
         >
-          <Card button onPress={() => alert("Clicked Card")}>
-            <CardItem cardBody>
-              <Image
-                source={{
-                  uri:
-                    "https://www.podareducation.org/Uploads/Campus/2013-6-8--12-5-38-227_sampleschoolbuilding.jpg"
-                }}
-                style={{ height: 200, width: null, flex: 1 }}
-              />
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Thumbnail
-                  source={{
-                    uri:
-                      "https://www.podareducation.org/Uploads/Campus/2013-6-8--12-5-38-227_sampleschoolbuilding.jpg"
-                  }}
+          <Content padder>
+            <Card style={{ borderRadius: 8, overflow: "hidden" }}>
+              <CardItem cardBody>
+                <Image
+                  source={require("../assets/school.png")}
+                  style={{ height: 200, width: null, flex: 1 }}
                 />
-                <Body>
-                  <View style={{ flexDirection: "row" }}>
-                    <View>
-                      <Text>DAV Public School,Angul</Text>
-                      <Text note>5 seats available</Text>
-                      <Text note>15 people applied in the past 1 month</Text>
-                    </View>
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        justifyContent: "flex-end",
-                        alignItems: "center"
-                      }}
-                    >
+              </CardItem>
+              <CardItem>
+                <Left>
+                  <Image
+                    style={{ width: 30, height: 30 }}
+                    source={require("../assets/schoollogo.png")}
+                  />
+                  <Body>
+                    <View style={{ flexDirection: "row" }}>
                       <View>
-                        <Text>4.8/5</Text>
+                        <Text>Delhi Public School</Text>
+                        <Text note>5 seats available</Text>
+                        <Text note>15 people applied in the past 1 month</Text>
                       </View>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          justifyContent: "flex-end",
+                          alignItems: "center"
+                        }}
+                      >
+                        <View>
+                          <Text>4.5/5</Text>
+                        </View>
 
-                      <View>
-                        <Icon name="md-star" />
+                        <View>
+                          <Icon name="md-star" style={{ marginLeft: 5 }} />
+                        </View>
                       </View>
                     </View>
-                  </View>
-                </Body>
-              </Left>
-            </CardItem>
-          </Card>
+                  </Body>
+                </Left>
+              </CardItem>
+            </Card>
+
+            <Card style={{ borderRadius: 8, overflow: "hidden" }}>
+              <CardItem cardBody>
+                <Image
+                  source={require("../assets/school2.jpg")}
+                  style={{ height: 200, width: null, flex: 1 }}
+                />
+              </CardItem>
+              <CardItem>
+                <Left>
+                  <Image
+                    style={{ width: 30, height: 30 }}
+                    source={require("../assets/schoollogo2.jpg")}
+                  />
+                  <Body>
+                    <View style={{ flexDirection: "row" }}>
+                      <View>
+                        <Text>DAV Chandrashekharpur</Text>
+                        <Text note>15 seats available</Text>
+                        <Text note>35 people applied in the past 1 month</Text>
+                      </View>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          justifyContent: "flex-end",
+                          alignItems: "center"
+                        }}
+                      >
+                        <View>
+                          <Text>3.5/5</Text>
+                        </View>
+
+                        <View>
+                          <Icon name="md-star" style={{ marginLeft: 5 }} />
+                        </View>
+                      </View>
+                    </View>
+                  </Body>
+                </Left>
+              </CardItem>
+            </Card>
+          </Content>
         </TouchableOpacity>
       </View>
     );
